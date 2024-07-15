@@ -88,12 +88,13 @@ h2 {
 }
 
 #solutionList {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: minmax(30px, auto);
-    gap: 10px;
-    justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* Change 3 to 7 for seven columns */
+  grid-auto-rows: minmax(30px, auto);
+  gap: 10px;
+  justify-items: center;
 }
+
 
 .solution {
     background-color: transparent; /* Remove white container */

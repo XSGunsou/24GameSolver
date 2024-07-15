@@ -84,15 +84,10 @@ function displaySolutions(solutions) {
     } else {
         solutionsHeader.innerHTML = `${solutions.length} Solutions`;
         solutions.forEach((solution, index) => {
-            if (index % 7 === 0) {
-                row = document.createElement('div');
-                row.className = 'row';
-                solutionList.appendChild(row);
-            }
             const solutionItem = document.createElement('div');
             solutionItem.className = 'solution';
             solutionItem.textContent = solution;
-            row.appendChild(solutionItem);
+            solutionList.appendChild(solutionItem);
         });
     }
 }
