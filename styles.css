@@ -24,7 +24,7 @@ h1 {
     font-style: normal;
 }
 
-h1 .green-text {
+.green-text {
     color: #28a745; /* Green color for "24" */
 }
 
@@ -94,7 +94,6 @@ h2 {
   gap: 10px;
   justify-items: center;
 }
-
 
 .solution {
     background-color: transparent; /* Remove white container */

@@ -79,10 +79,12 @@ function displaySolutions(solutions) {
     const solutionList = document.getElementById('solutionList');
     const solutionsHeader = document.getElementById('solutionsHeader');
     solutionList.innerHTML = '';
+    solutionsHeader.style.display = 'none'; // Hide solutions header initially
     if (solutions.length === 0) {
         solutionsHeader.innerHTML = "There's no way bro 💀";
     } else {
         solutionsHeader.innerHTML = `${solutions.length} Solutions`;
+        solutionsHeader.style.display = 'block'; // Show solutions header after results
         solutions.forEach((solution, index) => {
             const solutionItem = document.createElement('div');
             solutionItem.className = 'solution';
