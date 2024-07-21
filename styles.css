@@ -6,10 +6,12 @@ body {
     text-align: center;
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 0;
     background-color: #27282c;
     color: #ffffff;
-    overflow-y: auto; /* Enable vertical scrolling */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
 }
 
 header {
@@ -33,6 +35,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex: 1; /* Allows the main content to expand and push footer elements down */
 }
 
 .input-section {
@@ -79,7 +82,8 @@ button:hover {
 .results {
     width: 100%;
     margin-top: 20px;
-    text-align: left; /* Align text to the left */
+    text-align: left; 
+    position: relative; /* Ensure positioning context for footer */
 }
 
 h2 {
@@ -88,21 +92,21 @@ h2 {
 }
 
 #solutionList {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr); /* Change 3 to 7 for seven columns */
-  grid-auto-rows: minmax(30px, auto);
-  gap: 10px;
-  justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* Change for # columns */
+    grid-auto-rows: minmax(30px, auto);
+    gap: 10px;
+    justify-items: center;
 }
 
 .solution {
-    background-color: transparent; /* Remove white container */
-    border: none; /* Remove border */
+    background-color: transparent; 
+    border: none;
     padding: 10px 15px;
     margin: 5px;
     text-align: center;
-    color: #ffffff; /* Ensure text color is readable */
-    font-family: Georgia, serif; /* Set Georgia serif font */
+    color: #ffffff; 
+    font-family: Georgia, serif; 
 }
 
 body, html {
@@ -115,7 +119,7 @@ body, html {
 }
 
 .container {
-    position: relative;
+    flex: 1; /* Allows the container to expand and take available space */
 }
 
 .center {
@@ -158,4 +162,30 @@ svg {
     color: white;
     font-size: 18px;
     font-weight: 100;
+}
+
+/* Footer Positioning */
+.footer {
+    width: 100%;
+    position: relative;
+    padding: 10px 0; /* Ensure enough padding */
+    box-sizing: border-box;
+    background: transparent;
+}
+
+.kofi-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.watermark {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #ffffff;
+    font-size: 12px;
+    font-family: Georgia, serif; 
+    z-index: 1000; /* Ensure it's above other content */
 }
