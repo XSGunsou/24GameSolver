@@ -79,9 +79,9 @@ function displaySolutions(solutions) {
     const solutionList = document.getElementById('solutionList');
     const solutionsHeader = document.getElementById('solutionsHeader');
     solutionList.innerHTML = '';
-    solutionsHeader.style.display = 'none'; // hide "solutions"
     if (solutions.length === 0) {
         solutionsHeader.innerHTML = "There's no way bro 💀";
+        solutionsHeader.style.display = 'block'; // show "solutions"
     } else {
         solutionsHeader.innerHTML = `${solutions.length} Solutions`;
         solutionsHeader.style.display = 'block'; // show "solutions"
