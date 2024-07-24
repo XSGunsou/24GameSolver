@@ -81,10 +81,10 @@ function displaySolutions(solutions) {
     solutionList.innerHTML = '';
     if (solutions.length === 0) {
         solutionsHeader.innerHTML = "There's no way bro 💀";
-        solutionsHeader.style.display = 'block'; // show "solutions"
+        solutionsHeader.style.display = 'block'; 
     } else {
         solutionsHeader.innerHTML = `${solutions.length} Solutions`;
-        solutionsHeader.style.display = 'block'; // show "solutions"
+        solutionsHeader.style.display = 'block'; 
         solutions.forEach((solution, index) => {
             const solutionItem = document.createElement('div');
             solutionItem.className = 'solution';
