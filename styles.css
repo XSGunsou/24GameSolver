@@ -34,6 +34,7 @@ main {
     flex-direction: column;
     align-items: center;
     flex: 1; 
+}
 
 .input-section {
     display: flex;
@@ -160,7 +161,6 @@ svg {
     font-size: 18px;
     font-weight: 100;
 }
-
 
 .footer {
     width: 100%;
